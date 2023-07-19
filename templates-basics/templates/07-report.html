@@ -1,0 +1,21 @@
+{% extends "07-base.html" %}
+{% block content %}
+<div class="container-fluid">
+<p>Let me see how you preformed!</p>
+{% if report %}
+<p>Your username passed the 3 requirements!</p>
+{% else %}
+    <ul>
+        {% if not lower %}
+        <li>You did not include a lower case letter.</li>
+        {% endif %}
+        {% if not upper %}
+        <li>You did not include a upper cast letter.</li>
+        {% endif %}
+        {% if not num_end %}
+        <li>You did not end your username with a number.</li>
+        {% endif %}
+    </ul>
+{% endif %}
+</div>
+{% endblock %}
